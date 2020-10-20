@@ -3,9 +3,12 @@ package com.example.bonvoyage;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import com.example.bonvoyage.R;
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
@@ -133,8 +136,42 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
 
 		// Else do signup or do your stuff
 		else
-			Toast.makeText(getActivity(), "Do SignUp.", Toast.LENGTH_SHORT)
+			createUser();
+			Toast.makeText(getActivity(), "Signed Up!.", Toast.LENGTH_SHORT)
 					.show();
+		//TRANSITION TO TAB ACTIVITY
+		transitionToSocialMediaActivity();
+
 
 	}
+
+	public void createUser() {
+		ParseUser user = new ParseUser();
+		user.setUsername(emailId.getText().toString());
+		user.setPassword(password.getText().toString());
+		user.setEmail(emailId.getText().toString());
+
+		// Other fields can be set just like any other ParseObject,
+		// using the "put" method, like this: user.put("attribute", "its value");
+		// If this field does not exists, it will be automatically created
+
+		user.signUpInBackground(new SignUpCallback() {
+			public void done(ParseException e) {
+				if (e == null) {
+					// Hooray! Let them use the app now.
+
+				} else {
+					// Sign up didn't succeed. Look at the ParseException
+					// to figure out what went wrong
+				}
+			}
+		});
+	}
+
+	public void transitionToSocialMediaActivity(){
+		startActivity(new Intent(getActivity(), SuggestionActivity.class));
+
+	}
+
 }
+
