@@ -1,18 +1,10 @@
 package com.example.bonvoyage;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import com.parse.ParseException;
-import com.parse.ParseUser;
-import com.parse.SignUpCallback;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,6 +14,15 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+
+import com.parse.ParseException;
+import com.parse.ParseUser;
+import com.parse.SignUpCallback;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SignUp_Fragment extends Fragment implements OnClickListener {
 	private static View view;
@@ -137,10 +138,9 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
 		// Else do signup or do your stuff
 		else
 			createUser();
-			Toast.makeText(getActivity(), "Signed Up!.", Toast.LENGTH_SHORT)
-					.show();
+
 		//TRANSITION TO TAB ACTIVITY
-		transitionToSocialMediaActivity();
+
 
 
 	}
@@ -159,10 +159,18 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
 			public void done(ParseException e) {
 				if (e == null) {
 					// Hooray! Let them use the app now.
+					Toast.makeText(getActivity(), "Signed Up!.", Toast.LENGTH_SHORT)
+							.show();
+
+					transitionToSocialMediaActivity();
+					getActivity().onBackPressed();
+
 
 				} else {
 					// Sign up didn't succeed. Look at the ParseException
 					// to figure out what went wrong
+					Toast.makeText(getActivity(), "Oops.Problem Signing Up!", Toast.LENGTH_SHORT)
+							.show();
 				}
 			}
 		});
@@ -170,6 +178,7 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
 
 	public void transitionToSocialMediaActivity(){
 		startActivity(new Intent(getActivity(), SuggestionActivity.class));
+
 
 	}
 

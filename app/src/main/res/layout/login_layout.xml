@@ -2,7 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="#0C93A5"
+    android:background="#0D7C8A"
     android:padding="20dp">
 
     <LinearLayout
@@ -10,11 +10,13 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:background="#0D7C8A"
         android:orientation="vertical">
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="#0D7C8A"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/login"
@@ -63,6 +65,7 @@
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:background="#0D7C8A"
             android:orientation="horizontal"
             android:paddingTop="8dp"
             android:paddingBottom="5dp">
@@ -81,6 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#0D7C8A"
                 android:gravity="end"
                 android:padding="5dp"
                 android:text="@string/forgot"
@@ -99,7 +103,7 @@
             android:textColor="#009688"
             android:textSize="17sp"
             android:textStyle="bold"
-            app:backgroundTint="#FFFFFF" />
+            app:backgroundTint="@color/white_greyish" />
     </LinearLayout>
 
     <TextView
@@ -109,6 +113,7 @@
         android:layout_below="@+id/login_layout"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        android:background="#0D7C8A"
         android:gravity="center"
         android:padding="5dp"
         android:text="@string/newUser"

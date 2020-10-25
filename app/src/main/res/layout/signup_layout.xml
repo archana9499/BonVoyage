@@ -10,6 +10,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="#0D7C8A"
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/signUp"
@@ -172,6 +173,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="5dp"
+        android:background="#0D7C8A"
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/already_user"

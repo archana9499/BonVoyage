@@ -1,18 +1,11 @@
 
 package com.example.bonvoyage;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import com.parse.ParseUser;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.content.res.XmlResourceParser;
 import android.os.Bundle;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import android.text.InputType;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
@@ -25,14 +18,21 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
-import android.widget.Toast;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
+import com.parse.ParseUser;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Login_Fragment extends Fragment implements OnClickListener {
 	private static View view;
@@ -186,12 +186,11 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 		else
 			loginUser();
 
-			Toast.makeText(getActivity(), "Logged In!.", Toast.LENGTH_SHORT)
-					.show();
+
 
 			//TRANSITION TO TAB ACTIVITY
 
-		startActivity(new Intent(getActivity(), SuggestionActivity.class));
+
 
 	}
 	public void loginUser() {
@@ -199,9 +198,15 @@ public class Login_Fragment extends Fragment implements OnClickListener {
 			public void done(ParseUser user, ParseException e) {
 				if (user != null) {
 					// Hooray! The user is logged in.
+					Toast.makeText(getActivity(), "Logged In!.", Toast.LENGTH_SHORT)
+							.show();
+					startActivity(new Intent(getActivity(), SuggestionActivity.class));
+					getActivity().onBackPressed();
 
 				} else {
 					// Signup failed. Look at the ParseException to see what happened.
+					Toast.makeText(getActivity(), "Oops! No account found!", Toast.LENGTH_SHORT)
+							.show();
 				}
 			}
 		});
