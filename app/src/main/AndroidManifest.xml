@@ -3,7 +3,7 @@
     package="com.example.bonvoyage">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
@@ -27,8 +27,12 @@
             android:name=".MainActivity"
             android:theme="@style/Theme.BonVoyage" />
         <activity android:name=".SuggestionActivity" />
-        <activity android:name=".SocialMediaActivity"
+        <activity
+            android:name=".SocialMediaActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
+        <activity android:name=".UsersPosts">
 
         </activity>
     </application>

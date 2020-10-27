@@ -105,7 +105,7 @@ public class SharePicturesTab extends Fragment implements View.OnClickListener {
                             @Override
                             public void done(ParseException e) {
                                 if(e == null){
-                                    Toast.makeText(getActivity(), "Done!", Toast.LENGTH_SHORT)
+                                    Toast.makeText(getActivity(), "Moment Shared!", Toast.LENGTH_SHORT)
                                             .show();
                                 }else {
                                     Toast.makeText(getActivity(), "Oops! Unknown Error!", Toast.LENGTH_SHORT)
