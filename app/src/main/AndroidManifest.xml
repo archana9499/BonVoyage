@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BonVoyage">
-
+        <activity android:name=".AddJourneyActivity"></activity>
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashScreen">
@@ -29,12 +29,8 @@
         <activity android:name=".SuggestionActivity" />
         <activity
             android:name=".SocialMediaActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
-        </activity>
-        <activity android:name=".UsersPosts">
-
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity android:name=".UsersPosts"></activity>
     </application>
 
 </manifest>

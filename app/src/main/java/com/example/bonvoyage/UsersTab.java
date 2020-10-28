@@ -47,11 +47,16 @@ public class UsersTab extends Fragment implements AdapterView.OnItemClickListene
         arrayList = new ArrayList();
         arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1,arrayList);
 
+
         listView.setOnItemClickListener(UsersTab.this);
         listView.setOnItemLongClickListener(UsersTab.this);
 
+
         ParseQuery<ParseUser> parseQuery = ParseUser.getQuery();
         parseQuery.whereNotEqualTo("username",ParseUser.getCurrentUser().getUsername());
+
+        //edit below
+
         parseQuery.findInBackground(new FindCallback<ParseUser>() {
             @Override
             public void done(List<ParseUser> users, ParseException e) {
@@ -59,7 +64,9 @@ public class UsersTab extends Fragment implements AdapterView.OnItemClickListene
                     if(users.size() > 0){
 
                         for(ParseUser user : users){
+                           // String name= (String) user.get("name");
                             arrayList.add(user.getUsername());
+                            //edit below
 
                         }
 
@@ -70,7 +77,14 @@ public class UsersTab extends Fragment implements AdapterView.OnItemClickListene
 
             }
         });
+
+
+
+
+//edit above
         return view;
+
+
     }
 
     @Override

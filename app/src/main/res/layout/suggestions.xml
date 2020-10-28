@@ -24,20 +24,7 @@
 
 
         <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:layout_margin="16sp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="2dp" >
-
-            <include
-                android:id="@+id/seoul"
-                layout="@layout/card_1" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+            android:id="@+id/seoul"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -45,13 +32,12 @@
             app:cardCornerRadius="10dp"
             app:cardElevation="2dp">
 
-            <include
-                android:id="@+id/delhi"
-                layout="@layout/card_2" />
+            <include layout="@layout/card_1" />
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/delhi"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -59,9 +45,20 @@
             app:cardCornerRadius="10dp"
             app:cardElevation="2dp">
 
-            <include
-                android:id="@+id/amritsar"
-                layout="@layout/card_3" />
+            <include layout="@layout/card_2" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/amritsar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="16sp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp">
+
+            <include layout="@layout/card_3" />
 
         </androidx.cardview.widget.CardView>
 

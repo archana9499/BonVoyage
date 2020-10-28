@@ -2,6 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
+    <!--add journey-->
+    <item
+        android:id="@+id/addJourney"
+        android:title="Add Journey"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/add"/>
+
+
+
     <item
         android:id="@+id/postImageItem"
         android:title="Post Image"

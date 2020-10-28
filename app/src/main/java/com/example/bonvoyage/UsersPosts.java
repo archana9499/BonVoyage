@@ -1,28 +1,28 @@
  package com.example.bonvoyage;
 
  import android.app.ProgressDialog;
- import android.content.Intent;
- import android.graphics.Bitmap;
- import android.graphics.BitmapFactory;
- import android.graphics.Color;
- import android.os.Bundle;
- import android.view.Gravity;
- import android.view.ViewGroup;
- import android.widget.ImageView;
- import android.widget.LinearLayout;
- import android.widget.TextView;
- import android.widget.Toast;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
- import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
- import com.parse.FindCallback;
- import com.parse.GetDataCallback;
- import com.parse.ParseException;
- import com.parse.ParseFile;
- import com.parse.ParseObject;
- import com.parse.ParseQuery;
+import com.parse.FindCallback;
+import com.parse.GetDataCallback;
+import com.parse.ParseException;
+import com.parse.ParseFile;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
- import java.util.List;
+import java.util.List;
 
  public class UsersPosts extends AppCompatActivity {
 
@@ -36,7 +36,14 @@
          linearLayout = findViewById(R.id.linearLayout);
 
          Intent receivedIntentObject = getIntent();
+
+         //edit below line username to name
          String receivedUserName = receivedIntentObject.getStringExtra("username");
+
+         //edit below
+
+
+
          //Toast.makeText(this, receivedUserName, Toast.LENGTH_SHORT)
             //     .show();
 

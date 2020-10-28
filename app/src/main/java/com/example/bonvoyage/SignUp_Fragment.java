@@ -155,6 +155,14 @@ public class SignUp_Fragment extends Fragment implements OnClickListener {
 		// using the "put" method, like this: user.put("attribute", "its value");
 		// If this field does not exists, it will be automatically created
 
+		//edit below
+
+		user.put("name",fullName.getText().toString());
+		user.put("mobileNumber",mobileNumber.getText().toString());
+		user.put("location",location.getText().toString());
+
+
+
 		user.signUpInBackground(new SignUpCallback() {
 			public void done(ParseException e) {
 				if (e == null) {

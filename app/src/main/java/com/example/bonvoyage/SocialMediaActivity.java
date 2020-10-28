@@ -80,6 +80,14 @@ public class SocialMediaActivity extends AppCompatActivity {
             //fragmentTransaction.replace(R.id.socialMediaLayout,new SignUp_Fragment()).commit();
         }
 
+        //for add journey
+        else if(item.getItemId() == R.id.addJourney){
+            Intent intent = new Intent(SocialMediaActivity.this,AddJourneyActivity.class);
+            startActivity(intent);
+        }
+
+
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -143,4 +151,6 @@ public class SocialMediaActivity extends AppCompatActivity {
 
         }
     }
+
+
 }
