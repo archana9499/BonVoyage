@@ -116,6 +116,8 @@ public class MyProfile extends Fragment {
     }
 
 
+
+
     //edit below function
     /*public void newUpdateUser(){
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Users");
@@ -141,5 +143,7 @@ public class MyProfile extends Fragment {
     }
     //edit above function
     */
+
+
 
 }

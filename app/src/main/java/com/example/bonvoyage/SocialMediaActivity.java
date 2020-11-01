@@ -86,6 +86,13 @@ public class SocialMediaActivity extends AppCompatActivity {
             startActivity(intent);
         }
 
+        //for chat
+        else if(item.getItemId() == R.id.chat){
+            Intent intent = new Intent(SocialMediaActivity.this, ChatUsersActivity.class);
+            startActivity(intent);
+        }
+
+
 
 
 

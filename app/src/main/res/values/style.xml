@@ -4,4 +4,12 @@
     <style name="SplashScreen" parent="Theme.Design.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/background_splashscreen</item>
     </style>
+
+    <style name="appThemes" parent="Theme.Design.Light.NoActionBar">
+    </style>
+
+
+
+
+
 </resources>

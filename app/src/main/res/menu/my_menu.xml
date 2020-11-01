@@ -11,6 +11,14 @@
         app:showAsAction="always"
         android:icon="@drawable/add"/>
 
+    <!--chat-->
+    <item
+        android:id="@+id/chat"
+        android:title="Chat"
+        app:showAsAction="always"
+        android:icon="@drawable/chat"
+        android:orderInCategory="100"/>
+
 
 
     <item

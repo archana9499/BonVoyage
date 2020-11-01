@@ -45,7 +45,7 @@ public class UsersTab extends Fragment implements AdapterView.OnItemClickListene
 
         listView = view.findViewById(R.id.listView);
         arrayList = new ArrayList();
-        arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1,arrayList);
+        arrayAdapter = new ArrayAdapter(getContext(), android.R.layout.simple_expandable_list_item_1,arrayList);
 
 
         listView.setOnItemClickListener(UsersTab.this);
@@ -138,4 +138,5 @@ public class UsersTab extends Fragment implements AdapterView.OnItemClickListene
 
         return true;
     }
+
 }
